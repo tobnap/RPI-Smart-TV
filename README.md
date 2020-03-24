@@ -7,6 +7,7 @@ Start with a clean install of the [latest release of Raspbian](https://www.raspb
 ```
 sudo apt-get update
 sudo apt-get dist-upgrade
+sudo apt-get autoremove
 sudo reboot
 ```
 2. Set the WiFi country in raspi-config's **Localisation Options**: `sudo raspi-config`
