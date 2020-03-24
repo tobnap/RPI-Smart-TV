@@ -1,6 +1,12 @@
+# Install kodi
 sudo apt-get install -y kodi
+
+# Install netflix
 sudo apt install -y build-essential python-dev python-pip python-setuptools
 pip install --user pycryptodomex
+wget https://github.com/castagnait/repository.castagnait/raw/master/repository.castagnait-1.0.0.zip
+
+# Install Steam link and the kodi addon for it
 wget https://github.com/bigbrozer/kodi-steamlink-launcher/releases/download/v0.0.2/kodi-steamlink-launcher-v0.0.2.zip
 sudo useradd -m -U -G "audio,bluetooth,input,plugdev,video" -s /bin/bash -u 999 kodi
 cat <<EOF | sudo tee /etc/systemd/system/kodi.service
