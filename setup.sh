@@ -2,8 +2,8 @@
 sudo apt-get install -y kodi
 
 # Install netflix
-sudo apt-get install build-essential python-pip
-sudo apt-get install python-setuptools
+sudo apt-get install -y build-essential python-pip
+sudo apt-get install -y python-setuptools
 sudo pip install wheel
 pip install pycryptodomex
 sudo apt install kodi-inputstream-adaptive
