@@ -11,7 +11,6 @@ wget https://github.com/castagnait/repository.castagnait/raw/master/repository.c
 
 # Install Steam link and the kodi addon for it
 wget https://github.com/bigbrozer/kodi-steamlink-launcher/releases/download/v0.0.2/kodi-steamlink-launcher-v0.0.2.zip
-sudo useradd -m -U -G "audio,bluetooth,input,plugdev,video" -s /bin/bash -u 999 kodi
 
 cat <<EOF | sudo tee /etc/systemd/system/kodi.service
 [Unit]
@@ -19,8 +18,8 @@ Description = Kodi Media Center
 After = systemd-user-sessions.service network.target sound.target
 
 [Service]
-User = kodi
-Group = kodi
+User = pi
+Group = pi
 Type = simple
 ExecStart = /usr/bin/kodi-standalone
 
@@ -34,6 +33,4 @@ sudo systemctl start kodi
 
 sudo apt-get install -y steamlink
 
-cat <<EOF | sudo tee /etc/sudoers.d/steamlink-kodi
-kodi ALL=(root) NOPASSWD: /bin/systemctl stop kodi, /bin/systemctl restart kodi, /bin/openvt
-EOF
+steamlink
