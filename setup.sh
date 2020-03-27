@@ -1,9 +1,11 @@
 # Install kodi
 sudo apt-get install -y kodi
 
+# Install requirments for bluetooth audio
+sudo apt-get install -y pulseaudio pulseaudio-module-bluetooth
+
 # Install netflix
-sudo apt-get install -y build-essential python-pip
-sudo apt-get install -y python-setuptools
+sudo apt-get install -y build-essential python-pip python-setuptools libnss3
 sudo pip install wheel
 pip install pycryptodomex
 sudo apt install -y kodi-inputstream-adaptive
